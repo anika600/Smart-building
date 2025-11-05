@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Building Portal - Security</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <nav class="sidebar">
+        <h2 class="sidebar-header">
+            <i class="fa-solid fa-building-user"></i>
+            Resident Portal
+        </h2>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">
+                    <i class="fa-solid fa-table-columns"></i>
+                    Dashboard
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="environment.html" class="nav-link">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    Environment
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="amenities.html" class="nav-link">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    Amenities
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="security.html" class="nav-link active">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Security
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="energy.html" class="nav-link">
+                    <i class="fa-solid fa-bolt"></i>
+                    Energy
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="support.html" class="nav-link">
+                    <i class="fa-solid fa-circle-info"></i>
+                    Support
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <header class="page-header">
+            <h1>Security & Access</h1>
+            <p>Manage guests, view live cameras, and see smart security alerts.</p>
+        </header>
+
+        <div class="grid-container">
+
+            <div class="card">
+                <h3 class="card-header"><i class="fa-solid fa-user-plus"></i>Guest Access</h3>
+                <p>Generate a temporary digital key for your guests.</p>
+                <form style="margin-top: 1.5rem;">
+                    <div class="form-group">
+                        <label for="guest-name">Guest Name</label>
+                        <input type="text" id="guest-name" class="form-control" placeholder="e.g., Jane Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="access-duration">Duration</label>
+                        <select id="access-duration" class="form-control">
+                            <option value="2">2 Hours</option>
+                            <option value="8">8 Hours</option>
+                            <option value="24">24 Hours</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Digital Key</button>
+                </form>
+            </div>
+
+            <div class="card">
+                <h3 class="card-header"><i class="fa-solid fa-video"></i>Live Intercom</h3>
+                <div style="background: #333; color: white; height: 250px; display: flex; align-items: center; justify-content: center; border-radius: 8px; font-weight: 500;">
+                    
+                </div>
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                    <button class="btn btn-primary" style="flex-grow: 1;"><i class="fa-solid fa-microphone"></i> Talk</button>
+                    <button class="btn" style="flex-grow: 1; background: var(--bg-color);"><i class="fa-solid fa-key"></i> Unlock</button>
+                </div>
+            </div>
+
+            <div class="card grid-col-span-2">
+                <h3 class="card-header"><i class="fa-solid fa-list"></i>Smart Access Log</h3>
+                <ul style="list-style: none;">
+                    <li class="control-item">
+                        <span><i class="fa-solid fa-key" style="color: var(--primary-color)"></i> Front Door unlocked (Resident Key)</span>
+                        <span>Today, 6:02 PM</span>
+                    </li>
+                    <li class="control-item">
+                        <span><i class="fa-solid fa-box" style="color: #FFA000;"></i> AI: Package Detected at Door</span>
+                        <span>Today, 3:16 PM</span>
+                    </li>
+                     <li class="control-item">
+                        <span><i class="fa-solid fa-truck" style="color: var(--text-light)"></i> Delivery (Code: "Amazon")</span>
+                        <span>Today, 3:15 PM</span>
+                    </li>
+                    <li class="control-item">
+                        <span><i class="fa-solid fa-user" style="color: var(--text-light)"></i> Guest (Code: 8821)</span>
+                        <span>Today, 1:00 PM</span>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+    </main>
+
+</body>
+</html>

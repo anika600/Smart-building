@@ -1,0 +1,322 @@
+/* === Google Font Import === */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* === CSS Variables (Your Modern Theme) === */
+:root {
+    --primary-color: #0A7CFF; /* A vibrant, professional blue */
+    --primary-hover: #0056b3;
+    --bg-color: #F8F9FA;      /* Very light gray page background */
+    --sidebar-bg: #FFFFFF;    /* Clean white sidebar */
+    --card-bg: #FFFFFF;       /* White content cards */
+    --text-color: #212529;    /* Dark, readable text */
+    --text-light: #6C757D;    /* Lighter gray for subtext */
+    --border-color: #E9ECEF;  /* Subtle borders */
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    --border-radius: 12px;
+}
+
+/* === Global Reset & Base Styles === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/* === Sidebar Navigation === */
+.sidebar {
+    width: 260px;
+    background-color: var(--sidebar-bg);
+    border-right: 1px solid var(--border-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-header {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.sidebar-header i {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.nav-menu {
+    list-style: none;
+    flex-grow: 1;
+}
+
+.nav-item {
+    margin-bottom: 0.5rem;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 0.9rem 1rem;
+    border-radius: 8px;
+    color: var(--text-light);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-link i {
+    width: 20px;
+    margin-right: 1rem;
+    font-size: 1.1rem;
+}
+
+.nav-link:hover {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.nav-link.active {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    box-shadow: 0 4px 8px rgba(10, 124, 255, 0.2);
+}
+
+/* === Main Content Area === */
+.main-content {
+    margin-left: 260px; /* Same as sidebar width */
+    flex-grow: 1;
+    padding: 2rem 3rem;
+    max-width: calc(100% - 260px);
+}
+
+.page-header {
+    margin-bottom: 2rem;
+}
+
+.page-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.page-header p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+/* === Reusable Card Component === */
+.card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-header {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.card-header i {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+/* === Grid Layout for Cards === */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.grid-col-span-2 {
+    grid-column: span 2;
+}
+
+/* === Form & Button Elements === */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(10, 124, 255, 0.1);
+}
+
+textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* === Specific Control Styles (Environment Page) === */
+.control-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+.control-item:last-child {
+    border-bottom: none;
+}
+.control-item-label {
+    font-size: 1rem;
+    font-weight: 500;
+}
+.control-item-label span {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+/* Basic CSS-only Toggle Switch */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 28px;
+}
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 28px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+input:checked + .slider {
+    background-color: var(--primary-color);
+}
+input:checked + .slider:before {
+    transform: translateX(22px);
+}
+
+/* Climate Controls */
+.climate-controls {
+    text-align: center;
+}
+.temperature-display {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 1rem 0;
+}
+.climate-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.climate-buttons .btn {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+.climate-buttons .btn.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Amenity Booking Styles */
+.amenity-card {
+    display: flex;
+    flex-direction: column;
+}
+.amenity-card .card-content {
+    flex-grow: 1;
+}
+.amenity-card .btn {
+    margin-top: 1rem;
+}
+
+/* Energy Dashboard */
+.energy-stat {
+    text-align: center;
+}
+.energy-stat .stat-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+.energy-stat .stat-label {
+    color: var(--text-light);
+    font-size: 1rem;
+}

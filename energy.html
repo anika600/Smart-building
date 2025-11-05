@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Building Portal - Energy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <nav class="sidebar">
+        <h2 class="sidebar-header">
+            <i class="fa-solid fa-building-user"></i>
+            Resident Portal
+        </h2>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">
+                    <i class="fa-solid fa-table-columns"></i>
+                    Dashboard
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="security.html" class="nav-link">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Security
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="energy.html" class="nav-link active">
+                    <i class="fa-solid fa-bolt"></i>
+                    Energy
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="support.html" class="nav-link">
+                    <i class="fa-solid fa-circle-info"></i>
+                    Support
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <header class="page-header">
+            <h1>Energy Dashboard</h1>
+            <p>Monitor your consumption, see cost savings, and track renewable energy sources.</p>
+        </header>
+
+        <div class="grid-container">
+
+            <div class="card energy-stat">
+                <h3 class="card-header" style="justify-content: center;"><i class="fa-solid fa-plug"></i>Live Usage</h3>
+                <div class="stat-value">0.82 kWh</div>
+                <div class="stat-label">Currently active</div>
+            </div>
+
+            <div class="card energy-stat">
+                <h3 class="card-header" style="justify-content: center;"><i class="fa-solid fa-calendar-days"></i>Monthly Total</h3>
+                <div class="stat-value">124 kWh</div>
+                <div class="stat-label">vs. 145 kWh last month</div>
+            </div>
+
+            <div class="card energy-stat">
+                <h3 class="card-header" style="justify-content: center;"><i class="fa-solid fa-dollar-sign"></i>Estimated Cost</h3>
+                <div class="stat-value">$18.60</div>
+                <div class="stat-label">Projected monthly bill</div>
+            </div>
+
+            <div class="card grid-col-span-2">
+                <h3 class="card-header"><i class="fa-solid fa-chart-pie"></i>Usage Breakdown</h3>
+                <p>See where your energy is going.</p>
+                <ul style="list-style: none; margin-top: 1rem;">
+                    <li class="control-item"><span><i class="fa-solid fa-thermometer-half"></i> HVAC</span> <strong>45%</strong></li>
+                    <li class="control-item"><span><i class="fa-solid fa-lightbulb"></i> Lighting</span> <strong>20%</strong></li>
+                    <li class="control-item"><span><i class="fa-solid fa-plug"></i> Appliances</span> <strong>18%</strong></li>
+                    <li class="control-item"><span><i class="fa-solid fa-tv"></i> Entertainment</span> <strong>17%</strong></li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3 class="card-header"><i class="fa-solid fa-solar-panel"></i>Renewable Energy</h3>
+                <p>Your building's solar panels have offset <strong>30%</strong> of your total usage this month.</p>
+                <div class="energy-stat" style="margin-top: 1.5rem;">
+                    <div class="stat-value">520 kWh</div>
+                    <div class="stat-label">Total building generation (Today)</div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>

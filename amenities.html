@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Building Portal - Amenities</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <nav class="sidebar">
+        <h2 class="sidebar-header">
+            <i class="fa-solid fa-building-user"></i>
+            Resident Portal
+        </h2>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">
+                    <i class="fa-solid fa-table-columns"></i>
+                    Dashboard
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="environment.html" class="nav-link">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    Environment
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="amenities.html" class="nav-link active">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    Amenities
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="security.html" class="nav-link">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Security
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="energy.html" class="nav-link">
+                    <i class="fa-solid fa-bolt"></i>
+                    Energy
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="support.html" class="nav-link">
+                    <i class="fa-solid fa-circle-info"></i>
+                    Support
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <header class="page-header">
+            <h1>Amenity Booking</h1>
+            <p>Reserve building facilities, from EV chargers to the rooftop lounge.</p>
+        </header>
+
+        <div class="grid-container">
+
+            <div class="card amenity-card">
+                <h3 class="card-header"><i class="fa-solid fa-charging-station"></i>EV Charging Station</h3>
+                <div class="card-content">
+                    <p>Location: P2 Garage, Stalls 20-25</p>
+                    <p>Status: <strong>3/6 available</strong></p>
+                    <p>Book a 2-hour slot for your vehicle.</p>
+                </div>
+                <button class="btn btn-primary">Book Now</button>
+            </div>
+
+            <div class="card amenity-card">
+                <h3 class="card-header"><i class="fa-solid fa-dumbbell"></i>Fitness Center</h3>
+                <div class="card-content">
+                    <p>Location: Level 3</p>
+                    <p>Status: <strong>Open (12/30 capacity)</strong></p>
+                    <p>Book a 1-hour workout slot.</p>
+                </div>
+                <button class="btn btn-primary">Book Slot</button>
+            </div>
+
+            <div class="card amenity-card">
+                <h3 class="card-header"><i class="fa-solid fa-couch"></i>Rooftop Lounge</h3>
+                <div class="card-content">
+                    <p>Location: Level 40</p>
+                    <p>Status: <strong>Available tonight</strong></p>
+                    <p>Reserve the lounge for a private event.</p>
+                </div>
+                <button class="btn btn-primary">Reserve</button>
+            </div>
+
+            <div class="card amenity-card">
+                <h3 class="card-header"><i class="fa-solid fa-users"></i>Conference Room</h3>
+                <div class="card-content">
+                    <p>Location: Main Lobby</p>
+                    <p>Status: <strong>Booked 2 PM - 4 PM</strong></p>
+                    <p>Reserve for meetings (up to 8 people).</p>
+                </div>
+                <button class="btn btn-primary">Book Now</button>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>

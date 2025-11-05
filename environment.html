@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Building Portal - Environment</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <nav class="sidebar">
+        <h2 class="sidebar-header">
+            <i class="fa-solid fa-building-user"></i>
+            Resident Portal
+        </h2>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">
+                    <i class="fa-solid fa-table-columns"></i>
+                    Dashboard
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="environment.html" class="nav-link active">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    Environment
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="amenities.html" class="nav-link">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    Amenities
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="security.html" class="nav-link">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Security
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="energy.html" class="nav-link">
+                    <i class="fa-solid fa-bolt"></i>
+                    Energy
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="support.html" class="nav-link">
+                    <i class="fa-solid fa-circle-info"></i>
+                    Support
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <header class="page-header">
+            <h1>Environment Control</h1>
+            <p>Manage your apartment's lighting, climate, and blinds in real-time.</p>
+        </header>
+
+        <div class="grid-container">
+
+            <div class="card grid-col-span-2">
+                <h3 class="card-header"><i class="fa-solid fa-thermometer-half"></i>Climate (HVAC)</h3>
+                <div class="climate-controls">
+                    <div class="temperature-display">22°C</div>
+                    <input type="range" min="16" max="30" value="22" class="form-control" style="padding: 0;">
+                    
+                    <div class="climate-buttons" style="margin-top: 1.5rem;">
+                        <button class="btn"><i class="fa-solid fa-snowflake"></i> Cool</button>
+                        <button class="btn active"><i class="fa-solid fa-fire"></i> Heat</button>
+                        <button class="btn"><i class="fa-solid fa-fan"></i> Fan</button>
+                        <button class="btn" style="background: var(--bg-color); border: 1px solid var(--primary-color); color: var(--primary-color);">
+                            <i class="fa-solid fa-robot"></i> AI Comfort Mode
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-header"><i class="fa-solid fa-lightbulb"></i>Lighting</h3>
+                
+                <div class="control-item">
+                    <div class="control-item-label">
+                        Living Room
+                        <span>Main Overhead (60%)</span>
+                    </div>
+                    <input type="range" value="60" style="flex-grow: 1; margin: 0 1rem;">
+                    <label class="toggle-switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                
+                <div class="control-item">
+                    <div class="control-item-label">
+                        Kitchen
+                        <span>Counter Lights</span>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-header"><i class="fa-solid fa-window-maximize"></i>Blinds & Shades</h3>
+                
+                 <div class="control-item">
+                    <div class="control-item-label">
+                        Living Room
+                        <span>Current: 50% Closed</span>
+                    </div>
+                    <input type="range" value="50" style="flex-grow: 1; margin-left: 1rem;">
+                </div>
+
+                <div class="control-item">
+                    <div class="control-item-label">
+                        Bedroom
+                        <span>Current: 100% Closed</span>
+                    </div>
+                    <input type="range" value="100" style="flex-grow: 1; margin-left: 1rem;">
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
