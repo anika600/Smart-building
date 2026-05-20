@@ -1,6 +1,6 @@
 # 🏢 Smart Building Portal
 
-A modern, responsive, and visually stunning web-based **Resident Dashboard & Smart Home Automation Portal**. This frontend application simulates an intuitive control center for apartment residents, allowing them to manage environmental conditions, track real-time energy usage, book building amenities, and coordinate security access through a unified interface.
+A modern and responsive web-based **Resident Dashboard & Smart Home Automation Portal**. This frontend application simulates an intuitive control center for apartment residents, allowing them to manage environmental conditions, track real-time energy usage, book building amenities, and coordinate security access through a unified interface.
 
 ---
 
@@ -51,8 +51,6 @@ The structural interface follows modern design aesthetics utilizing:
 
 ## 🛠️ Installation & Getting Started
 
-Since this platform is engineered natively utilizing vanilla web primitives, there are **zero build steps or external package installations** required. 
-
-1. **Clone the repository:**
+ **Clone the repository:**
    ```bash
    git clone [https://github.com/YOUR_USERNAME/Smart-building.git](https://github.com/YOUR_USERNAME/Smart-building.git)
